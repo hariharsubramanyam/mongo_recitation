@@ -7,18 +7,6 @@ var activitySchema = mongoose.Schema({
   intensity: String
 });
 
-activitySchema.methods.getDescription = function(callback) {
-  return this.type + '-' + this.intensity;
-};
-
-activitySchema.path('intensity').validate(function(value) {
-    return /Low|Medium|High/i.test(value);
-}, 'Invalid intensity');
-
-activitySchema.path('duration').validate(function(value) {
-  return value > 0 && value < 1000;
-});
-
 // When we 'require' this model in another file (e.g. routes),
 // we specify what we are importing form this file via module.exports.
 // Here, we are 'exporting' the mongoose model object created from
