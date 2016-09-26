@@ -4,12 +4,17 @@ var Activity = require('../models/activity');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  // Implement this.
+	Activity.find(function(err, activitiesList) {
+		if (err) console.log(err);
+		res.json({
+			'activities': activitiesList
+		});
+	});
 });
 
 router.post('/', function(req, res, next) {
   activity = req.body;
-  res.send("Need to implement this");
+  res.send("Implement this");
 });
 
 module.exports = router;

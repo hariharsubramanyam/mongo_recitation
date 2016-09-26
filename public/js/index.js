@@ -13,7 +13,20 @@ $(document).ready(function() {
 
   // On submit button click, create the activity and display it.
   $('#submit-button').click(function() {
-    alert("Need to implement this");
+		// Create activity with POST request.
+    $.post('/activities', {
+        type: $('#type-input').val(),
+        duration: $('#minutes-input').val(),
+        intensity: $('#intensity-input').val()
+    }, function(resp) {
+      if (resp.success) {
+        // Display activity.
+        var html = Handlebars.templates.activity_item(resp.activity);
+        $(insertSelector).after(html);
+      } else {
+        alert(resp.message);
+      }
+    });
   });
 });
 
