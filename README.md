@@ -5,22 +5,24 @@ Make sure you've installed Node.js and NPM. Install the Handlebars compiler with
 sudo npm install -g handlebars
 ```
 
+If you are on Windows, run the `npm install -g handlebars` command instead in a 
+command prompt that you are running as administrator.
+
 Make sure you've installed [MongoDB](https://www.mongodb.com/download-center?jmp=nav#community).
 
-Start the MongoDB server in one terminal window.
+Here are the [Windows](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/),
+[Linux](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-linux/),
+and [OS X](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/) installation instructions.
+Once you've installed MongoDB, launch the ModelDB Server (`mongod`).
 
-```
-sudo mongod
-```
-
-This will start the MongoDB server. Open another terminal window and navigate this project.
+Open another terminal window and navigate to the directory containing this repo's code.
 Then, install the app dependencies with
 
 ```
 npm install
 ```
 
-Start the app
+To start the app, run
 
 ```
 npm start

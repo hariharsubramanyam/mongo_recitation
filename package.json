@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "handlebars templates/* -f public/js/templates.js && node ./bin/www"
+    "start": "handlebars templates/activity_item.handlebars templates/activity_items.handlebars -f public/js/templates.js && node ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
